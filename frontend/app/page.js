@@ -144,26 +144,7 @@ export default function Home() {
             </div>
         </div>
     </section>
-    <section style={{ padding: '6rem 2rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem', color: '#fff' }}>Meet The Team</h2>
-            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '4rem', fontSize: '1.1rem' }}>The brilliant minds behind AK SOFT-TECH.</p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '6rem', flexWrap: 'wrap' }}>
-                <div style={{ textAlign: 'center' }}>
-                    <div style={{ width: '250px', height: '250px', borderRadius: '50%', backgroundColor: '#333', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <span style={{ color: 'var(--text-secondary)' }}>Photo</span>
-                    </div>
-                    <h3 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold' }}>Ajeet Ojha</h3>
-                </div>
-                <div style={{ textAlign: 'center' }}>
-                    <div style={{ width: '250px', height: '250px', borderRadius: '50%', backgroundColor: '#333', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <span style={{ color: 'var(--text-secondary)' }}>Photo</span>
-                    </div>
-                    <h3 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold' }}>Kamal Prajapat</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     {/* Bottom CTA */}
     <section className="bottom-cta" style={{ marginTop: '0', borderTop: '1px solid var(--border-color)' }}>

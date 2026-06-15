@@ -10,7 +10,7 @@ export default function About() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/stats')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/stats`)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
