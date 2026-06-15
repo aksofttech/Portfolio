@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
