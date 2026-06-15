@@ -1,6 +1,25 @@
 'use client'
+import { useState, useEffect } from 'react';
 
 export default function About() {
+  const [stats, setStats] = useState({
+    team_members: '...',
+    ai_solutions: '...',
+    projects_delivered: '...',
+    client_satisfaction: '...'
+  });
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/stats')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          setStats(data.data);
+        }
+      })
+      .catch(err => console.error('Failed to fetch stats:', err));
+  }, []);
+
   return (
     <div style={{ minHeight: '100vh', padding: '6rem 2rem', maxWidth: '1200px', margin: '0 auto', color: 'var(--text-primary)' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -88,19 +107,19 @@ export default function About() {
             <h2 style={{ fontSize: '3rem', textAlign: 'center', color: '#fff', marginBottom: '4rem' }}>By the Numbers</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', textAlign: 'center' }}>
                 <div>
-                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>50+</h3>
+                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stats.team_members}</h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', fontWeight: '500' }}>Team Members</p>
                 </div>
                 <div>
-                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>10+</h3>
+                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stats.ai_solutions}</h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', fontWeight: '500' }}>AI Solutions Deployed</p>
                 </div>
                 <div>
-                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>200+</h3>
+                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stats.projects_delivered}</h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', fontWeight: '500' }}>Projects Delivered</p>
                 </div>
                 <div>
-                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>98%</h3>
+                    <h3 style={{ fontSize: '4rem', color: '#fff', marginBottom: '0.5rem', background: 'linear-gradient(135deg, var(--accent-blue), var(--accent-purple))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{stats.client_satisfaction}</h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', fontWeight: '500' }}>Client Satisfaction</p>
                 </div>
             </div>

@@ -146,37 +146,20 @@ export default function Home() {
     </section>
     <section style={{ padding: '6rem 2rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '4rem', color: '#fff' }}>What Our Clients Say</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
-                <div style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '2rem' }}>
-                    <div style={{ display: 'flex', gap: '5px', marginBottom: '1rem' }}>⭐⭐⭐⭐⭐</div>
-                    <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '2rem', lineHeight: '1.6' }}>
-                        "AK SOFT-TECH transformed our outdated legacy system into a modern, cloud-based platform. The transition was seamless, and our productivity increased by 60% within the first quarter."
-                    </p>
-                    <div>
-                        <h4 style={{ color: '#fff', marginBottom: '0.25rem' }}>Sarah Mitchell</h4>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>CTO at FinanceFlow Inc.</span>
+            <h2 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '1rem', color: '#fff' }}>Meet The Team</h2>
+            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '4rem', fontSize: '1.1rem' }}>The brilliant minds behind AK SOFT-TECH.</p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '6rem', flexWrap: 'wrap' }}>
+                <div style={{ textAlign: 'center' }}>
+                    <div style={{ width: '250px', height: '250px', borderRadius: '50%', backgroundColor: '#333', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <span style={{ color: 'var(--text-secondary)' }}>Photo</span>
                     </div>
+                    <h3 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold' }}>Ajeet Ojha</h3>
                 </div>
-                <div style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '2rem' }}>
-                    <div style={{ display: 'flex', gap: '5px', marginBottom: '1rem' }}>⭐⭐⭐⭐⭐</div>
-                    <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '2rem', lineHeight: '1.6' }}>
-                        "The mobile app they built for us has received 4.8 stars on the App Store. Our user engagement has tripled since launch. Highly recommend their team!"
-                    </p>
-                    <div>
-                        <h4 style={{ color: '#fff', marginBottom: '0.25rem' }}>Marcus Chen</h4>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Founder at HealthTrack</span>
+                <div style={{ textAlign: 'center' }}>
+                    <div style={{ width: '250px', height: '250px', borderRadius: '50%', backgroundColor: '#333', margin: '0 auto 1.5rem', overflow: 'hidden', border: '4px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <span style={{ color: 'var(--text-secondary)' }}>Photo</span>
                     </div>
-                </div>
-                <div style={{ background: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '2rem' }}>
-                    <div style={{ display: 'flex', gap: '5px', marginBottom: '1rem' }}>⭐⭐⭐⭐⭐</div>
-                    <p style={{ color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: '2rem', lineHeight: '1.6' }}>
-                        "Working with AK SOFT-TECH felt like having an extension of our own team. They understood our vision and delivered beyond our expectations."
-                    </p>
-                    <div>
-                        <h4 style={{ color: '#fff', marginBottom: '0.25rem' }}>Emily Rodriguez</h4>
-                        <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>VP of Eng at DataSync Solutions</span>
-                    </div>
+                    <h3 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 'bold' }}>Kamal Prajapat</h3>
                 </div>
             </div>
         </div>

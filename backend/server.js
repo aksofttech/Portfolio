@@ -40,6 +40,20 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+app.get('/api/stats', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM company_stats ORDER BY id DESC LIMIT 1');
+    if (result.rows.length > 0) {
+      res.status(200).json({ success: true, data: result.rows[0] });
+    } else {
+      res.status(404).json({ error: 'Stats not found' });
+    }
+  } catch (error) {
+    console.error('Database query error:', error);
+    res.status(500).json({ error: 'Failed to fetch stats' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
