@@ -1,0 +1,42 @@
+'use client'
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import Lenis from 'lenis'
+
+export default function SmoothScroll({ children }) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Re-initialize 3D graphics on route change
+    if (typeof window !== 'undefined' && window.initAK3D) {
+        setTimeout(() => window.initAK3D(), 200);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
+
+  return <>{children}</>
+}
