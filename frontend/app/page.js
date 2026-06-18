@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const MagicRings = dynamic(() => import('../components/MagicRings/MagicRings'), { ssr: false });
+const Orb = dynamic(() => import('../components/Orb/Orb'), { ssr: false });
 const Strands = dynamic(() => import('../components/Strands/Strands'), { ssr: false });
 const Threads = dynamic(() => import('../components/Threads/Threads'), { ssr: false });
 const GridScan = dynamic(() => import('../components/GridScan/GridScan').then(mod => mod.GridScan), { ssr: false });
@@ -55,8 +55,11 @@ export default function Home() {
     return (
         <>
             {/* Hero Section */}
-            <section className="hero" id="home">
-                <div className="hero-container">
+            <section className="hero" id="home" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, opacity: 0.6 }}>
+                    <Orb hoverIntensity={5} rotateOnHover={true} hue={0} forceHoverState={true} backgroundColor="#000000" />
+                </div>
+                <div className="hero-container" style={{ position: 'relative', zIndex: 1 }}>
                     <div className="hero-content">
                         <div style={{ display: 'block', width: '100%' }}>
                             <div className="hero-badge">
@@ -81,15 +84,7 @@ export default function Home() {
                             <a href="/contact" className="btn-primary">Get a Free Consultation</a>
                         </div>
                     </div>
-                    <div className="hero-3d" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '900px', height: 'auto', aspectRatio: '16/9', minHeight: '300px', margin: '0 auto' }}>
-                        <MagicRings 
-                            color="#a855f7" 
-                            colorTwo="#6366f1" 
-                            ringCount={8} 
-                            speed={1.2} 
-                            followMouse={true} 
-                        />
-                    </div>
+
                 </div>
             </section>
 
@@ -131,7 +126,7 @@ export default function Home() {
                 </div>
                 <div style={{ position: 'relative', zIndex: 1, padding: '0 2rem', maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <span className="badge-text" style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', borderRadius: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Value Proposition</span>
+
                         <h2 className="section-title" style={{ marginTop: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Why Choose AK SOFT-TECH?</h2>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
                             We don't just write code – we engineer solutions that solve real business problems. Our team combines technical expertise with strategic thinking to deliver software that actually works for your business.
@@ -160,7 +155,7 @@ export default function Home() {
                 </div>
                 <div style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                        <span className="badge-text" style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', borderRadius: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>How We Work</span>
+
                         <h2 className="section-title" style={{ marginTop: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Our Proven Process</h2>
                         <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>We follow a streamlined agile methodology to ensure transparent communication and rapid delivery from day one.</p>
                     </div>

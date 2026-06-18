@@ -6,7 +6,7 @@ export default function Services() {
     <div style={{ minHeight: '100vh', paddingBottom: '8rem' }}>
         {/* Page Header */}
         <div style={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '2rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
-            <span className="badge-text" style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', borderRadius: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>What We Do</span>
+
             <h1 className="section-title" style={{ marginTop: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Comprehensive Software Solutions</h1>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', lineHeight: '1.6' }}>
                 From concept to deployment, we provide end-to-end software development services tailored to your business requirements.

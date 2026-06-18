@@ -91,7 +91,7 @@ export default function About() {
   return (
     <div className="page-container" style={{ minHeight: '100vh', maxWidth: '1200px', margin: '0 auto', color: 'var(--text-primary)' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <span className="badge-text" style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', borderRadius: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Company</span>
+
             <h1 style={{ fontSize: '4.5rem', marginTop: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Building the Future of Software</h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', lineHeight: '1.6' }}>
                 We're a team of passionate developers, designers, and strategists dedicated to creating software that makes a difference.

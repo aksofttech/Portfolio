@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <div className="contact-page" style={{ minHeight: '100vh', paddingBottom: '4rem' }}>
         <div style={{ textAlign: 'center', paddingTop: '6rem', paddingBottom: '3rem', paddingLeft: '1rem', paddingRight: '1rem' }}>
-            <span className="badge-text" style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', borderRadius: '20px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Get in Touch</span>
+
             <h1 className="section-title" style={{ marginTop: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Free Consultation</h1>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', lineHeight: '1.6' }}>
                 Ready to transform your business? Tell us about your project, and our experts will get back to you with a custom strategy.

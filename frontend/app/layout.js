@@ -4,7 +4,6 @@ import Script from "next/script";
 import SmoothScroll from "../components/SmoothScroll";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import DotFieldBackground from "../components/DotFieldBackground";
 import CustomCursor from "../components/CustomCursor/CustomCursor";
 
 const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"] });
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className} style={{ position: 'relative' }}>
         <CustomCursor />
-        <DotFieldBackground />
         <SmoothScroll>
           <Navbar />
           <main style={{ minHeight: '100vh', paddingTop: '80px' }}>
