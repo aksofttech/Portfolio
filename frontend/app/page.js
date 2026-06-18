@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const Orb = dynamic(() => import('../components/Orb/Orb'), { ssr: false });
 const Strands = dynamic(() => import('../components/Strands/Strands'), { ssr: false });
 const Threads = dynamic(() => import('../components/Threads/Threads'), { ssr: false });
-const GridScan = dynamic(() => import('../components/GridScan/GridScan').then(mod => mod.GridScan), { ssr: false });
+const Ballpit = dynamic(() => import('../components/Ballpit/Ballpit'), { ssr: false });
 const Hyperspeed = dynamic(() => import('../components/Hyperspeed/Hyperspeed'), { ssr: false });
 const TextType = dynamic(() => import('../components/TextType/TextType'), { ssr: false });
 import { hyperspeedPresets } from '../components/Hyperspeed/HyperSpeedPresets';
@@ -223,16 +223,12 @@ export default function Home() {
             {/* Bottom CTA */}
             <section className="bottom-cta" style={{ position: 'relative', overflow: 'hidden', marginTop: '0', borderTop: '1px solid var(--border-color)', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-                    <GridScan 
-                        linesColor="#1108ea"
-                        scanColor="#1108ea"
-                        scanOpacity={0.8}
-                        gridScale={0.15}
-                        lineStyle="solid"
-                        scanDirection="pingpong"
-                        scanDuration={2.0}
-                        scanDelay={1.0}
-                        scanSoftness={2}
+                    <Ballpit
+                        count={100}
+                        gravity={0.01}
+                        friction={0.9975}
+                        wallBounce={0.95}
+                        followCursor={false}
                     />
                 </div>
                 <div className="cta-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '4rem 2rem' }}>
