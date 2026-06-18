@@ -229,6 +229,7 @@ export default function Home() {
                         friction={0.9975}
                         wallBounce={0.95}
                         followCursor={false}
+                        colors={[0xffffff, 0x8b5cf6, 0x1e1b4b, 0x000000, 0xd4d4d8]}
                     />
                 </div>
                 <div className="cta-container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '4rem 2rem' }}>
