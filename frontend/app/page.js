@@ -6,9 +6,7 @@ const Orb = dynamic(() => import('../components/Orb/Orb'), { ssr: false });
 const Strands = dynamic(() => import('../components/Strands/Strands'), { ssr: false });
 const Threads = dynamic(() => import('../components/Threads/Threads'), { ssr: false });
 const Ballpit = dynamic(() => import('../components/Ballpit/Ballpit'), { ssr: false });
-const Hyperspeed = dynamic(() => import('../components/Hyperspeed/Hyperspeed'), { ssr: false });
 const TextType = dynamic(() => import('../components/TextType/TextType'), { ssr: false });
-import { hyperspeedPresets } from '../components/Hyperspeed/HyperSpeedPresets';
 
 const MagicBento = dynamic(() => import('../components/MagicBento/MagicBento'), { ssr: false });
 
@@ -186,9 +184,6 @@ export default function Home() {
 
             {/* Industries We Serve */}
             <section style={{ position: 'relative', overflow: 'hidden', padding: '6rem 2rem' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-                    <Hyperspeed effectOptions={hyperspeedPresets.four} />
-                </div>
                 <div style={{ position: 'relative', zIndex: 1, maxWidth: '1200px', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2 className="section-title" style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Industries We Empower</h2>
