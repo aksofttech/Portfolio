@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Orb = dynamic(() => import('../components/Orb/Orb'), { ssr: false });
 const Strands = dynamic(() => import('../components/Strands/Strands'), { ssr: false });
@@ -191,7 +192,9 @@ export default function Home() {
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                         <div style={{ padding: '2rem', border: '1px solid var(--border-color)', borderRadius: '16px', textAlign: 'center', background: 'rgba(10, 10, 10, 0.7)', backdropFilter: 'blur(10px)' }}>
-                            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎓</div>
+                            <div style={{ height: '80px', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
+                                <DotLottieReact src="/Education & EdTech.lottie" loop autoplay />
+                            </div>
                             <h3 style={{ fontSize: '1.5rem', color: '#fff', marginBottom: '0.5rem' }}>Education & EdTech</h3>
                             <p style={{ color: 'var(--text-secondary)' }}>LMS, ERP systems, and AI Lesson Planners.</p>
                         </div>
